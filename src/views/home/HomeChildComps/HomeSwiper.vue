@@ -1,6 +1,6 @@
 <template>
-  <div class="home-swiper">
-    <swiper v-if="banners.length >= 1">
+  <div id="home-swiper">
+    <swiper v-if="banners.length >= 1" class="home-swiper">
         <swiper-item v-for="(item,index) in banners" :key="index">
             <img :src="item.image" alt="" @load="swiperImageLoad">            
         </swiper-item>

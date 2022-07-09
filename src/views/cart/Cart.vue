@@ -2,7 +2,7 @@
   <div>
       <!-- <h1>购物车</h1> -->
       <cart-nav-bar />
-      <cart-list class="cart-list"/>
+      <cart-list class="cart-list" />
       <cart-bottom-bar @buyClcik="buyClcik" />
       <toast :isShow="showToast" :message="toastMessage" />
   </div>
@@ -57,7 +57,7 @@ export default {
           this.toastMessage = ''
         },1000)
       }
-    }
+    },  
   },
 }
 

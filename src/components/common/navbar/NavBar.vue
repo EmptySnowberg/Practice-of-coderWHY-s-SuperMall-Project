@@ -25,7 +25,7 @@ export default {
 }
 
 </script>
-<style scoped>
+<style>
 .nav-bar {
     display: flex;
     width: 100%;

@@ -26,7 +26,9 @@ export default {
     }
   },
   data () {
-    return {}
+    return {
+        // currentIndex:0
+    }
   },
   computed: {},
   created () {},

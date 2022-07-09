@@ -138,7 +138,7 @@ export default {
         this.scrollTopYs.push(Number.MAX_VALUE) //存入一个最大值
         // console.log(this.scrollTopYs);
         // }
-      },200)
+      },100)
     })
   },
   mounted() {

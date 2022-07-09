@@ -45,6 +45,7 @@ export default {
     /* padding: 5px 0; */
     /* margin-bottom: 5px; */
     height: 44px;
+    width: 100%;
     line-height: 44px;
     text-align: center;
     background-color: #fff;

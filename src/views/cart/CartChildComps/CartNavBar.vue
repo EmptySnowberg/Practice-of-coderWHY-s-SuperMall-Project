@@ -1,7 +1,7 @@
 <template>
   <div class="cart-nav-bar">
     <nav-bar>
-        <div slot="left">
+        <div slot="left" >
                 <div @click="backClick" class="cart-nav-left"> </div>
         </div>
         <div slot="center">购物车({{cartListNum}})</div>
@@ -32,6 +32,7 @@ export default {
   mounted() {},
   methods: {
     backClick() {
+      console.log('666');
       this.$router.go(-1)
     }
   },

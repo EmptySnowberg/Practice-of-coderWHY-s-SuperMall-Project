@@ -1,11 +1,11 @@
 <template>
   <div id="home">
-      <nav-bar>
+      <nav-bar class="home-nav-bar">
         <div slot="center">购物街</div>
       </nav-bar>
       <tab-control @tabClick="tabClick" :titles="titles"  ref="tabControl1" v-show="isTabFixed" class="tabcontrol" />
       <div class="content" @scroll="homeScroll($event)" ref="content">
-        <home-swiper :banners="bannersList" @swiperImageLoad="swiperImageLoad" />
+        <home-swiper :banners="bannersList" @swiperImageLoad="swiperImageLoad" class="home-in-swiper"/>
         <home-recommend :recommends="recommends" />
         <home-feature />
         <tab-control @tabClick="tabClick" :titles="titles"  ref="tabControl2"   />
@@ -137,7 +137,7 @@ export default {
               this.getHomeGoods('sell')
             }
 
-            this.isTabFixed = e.target.scrollTop>=this.tabOffsetTop
+            this.isTabFixed = e.target.scrollTop>=this.tabOffsetTop-44
             
 
       },
@@ -164,19 +164,30 @@ export default {
 #home {
   position: relative;
 }
+.home-nav-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
 .tabcontrol {
-  position: relative;
+  position: absolute;
+  top: 44px;
 }
 .content {
   /* margin-top: 44px; */
   position: absolute;
-  top: 44px;
-  margin-bottom: 49px;
+  /* top: 44px;  不可使用该属性，否则会增大整个home界面的高度，导致拉到底部时nav-bar上移消失*/
+  /* margin-bottom: 49px; */
 
   /* 如果要使用@scroll则必须加上如下两个属性 */
   overflow: scroll;
   height: 100vh;
   /* transition: all .3s; */
+}
+.home-in-swiper {
+  margin-top: 44px;
 }
 .goods-list {
   margin-bottom: 49px;
